@@ -48,7 +48,7 @@ if UPSTREAM_REPO is not None:
         srun(["rm", "-rf", ".git"])
 
     update = srun([f"git init -q \
-                     && git config --global user.email e.anastayyar@gmail.com \
+                     && git config --global user.email iamvpk@gmx.us \
                      && git config --global user.name mltb \
                      && git add . \
                      && git commit -sm update -q \
@@ -59,4 +59,4 @@ if UPSTREAM_REPO is not None:
     if update.returncode == 0:
         log_info('Successfully updated with latest commit from UPSTREAM_REPO')
     else:
-        log_error('Something went wrong while updating, check UPSTREAM_REPO if valid or not!')
+        log_error('Something went wrong while updating, check UPSTREAM_REPO if valid or not! Check whether the service is running.')
